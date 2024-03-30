@@ -12,6 +12,7 @@ const getData = async () => {
         <span class="score">${((item.Score / totalVotes) * 100).toFixed(
             2
         )}%</span>
+        <div class="percent-bar percent_5"></div>
     `
     );
     voteItems.forEach((element) => {
