@@ -26,8 +26,12 @@ html {
   font-family: "Muli";
 }
 
+span{
+    pointer-events: none;
+}
+
 .container {
-  width: 20rem;
+  width: min(90%, 25rem);
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -83,23 +87,9 @@ html {
 	height: 100%;
 	z-index: 0;
 	opacity: 0.2;
-	transition: width 0.5s ease-in;
-}
-
-.percent_5 {
-    width: 5%;
-}
-
-.percent_20 {
-    width: 20%;
-}
-
-.percent_25 {
-    width: 25%;
-}
-
-.percent_50 {
-    width: 50%;
+	transition: width 1s ease-in;
+    pointer-events: none;
+    width: 0;
 }
 
 .btn {
