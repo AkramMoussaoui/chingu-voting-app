@@ -36,6 +36,7 @@ const getData = async () => {
   voteItems.forEach((element) => {
     const div = document.createElement("div");
     div.classList.add("voting_item");
+    div.classList.add('hover')
     div.innerHTML = element;
 
     // Add event listener to handle click
@@ -60,6 +61,7 @@ const getData = async () => {
     for (const votingItem of votingItems) {
       // Remove click event listener
       votingItem.removeEventListener("click", handleItemClick);
+      votingItem.classList.remove('hover')
 
       const subject = votingItem.querySelector(".subject").innerText;
       const scoreElement = votingItem.querySelector(".score");
