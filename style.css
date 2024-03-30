@@ -1,24 +1,124 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+:root {
+  --color-green-1: #67df9b;
+  --color-green-2: #20c4ae;
 }
 
-body,html{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    text-align: center;
-    width: 2rem;
-    height: 5rem;
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    var(--color-green-1),
+    var(--color-green-2)
+  );
+  font-family: "Muli";
 }
 
-.voting_item{
-    width: 100%;
+.container {
+  width: 20rem;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin: 0 auto;
 }
 
+.voting_container {
+  text-align: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.voting_item {
+  width: 80%;
+  border: 1px solid #bbb;
+  color: #555;
+  cursor: pointer;
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.voting_item:hover {
+	color: #111;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.voting_item.active {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	color: #111;
+}
+
+.voting_item.active:before {
+	background: linear-gradient(to bottom, var(--color-green-1), var(--color-green-2));
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 5px;
+	height: 100%;
+}
+
+.voting_item .percent-bar {
+	background-color: var(--color-green-1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	height: 100%;
+	z-index: 0;
+	opacity: 0.2;
+	transition: width 0.5s ease-in;
+}
+
+.percent_5 {
+    width: 5%;
+}
+
+.percent_20 {
+    width: 20%;
+}
+
+.percent_25 {
+    width: 25%;
+}
+
+.percent_50 {
+    width: 50%;
+}
+
+.btn {
+	background: linear-gradient(to right, var(--color-green-1), var(--color-green-2));
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 20px 25px;
+	letter-spacing: 0.5px;
+	line-height: 20px;
+	width: 100%;
+}
+
+.btn:active {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.btn:focus {
+	outline: none;
+}

@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <h3>Vote for your favorite project</h3>
-        <div class="voting_item">
-            <span class="subject">Landing Page</span>
-            <span class="score">0.00%</span>
+        <div class="voting_container">
+            <h3>Vote for your favorite project</h3>
+            <div class="voting_item active">
+                <span class="subject">Landing Page</span>
+                <span class="score">5.00%</span>
+                <div class="percent-bar percent_5"></div>
+            </div>
+            <div class="voting_item">
+                <span class="subject">A design piece</span>
+                <span class="score">20.00%</span>
+                <div class="percent-bar percent_20"></div>
+            </div>
+            <div class="voting_item">
+                <span class="subject">Hangman game</span>
+                <span class="score">50.00%</span>
+                <div class="percent-bar percent_50"></div>
+            </div>
+            <div class="voting_item">
+                <span class="subject">Snake game</span>
+                <span class="score">25.00%</span>
+                <div class="percent-bar percent_25"></div>
+            </div>
         </div>
-        <div class="voting_item">
-            <span class="subject">A design piece</span>
-            <span class="score">25.00%</span>
-        </div>
-        <div class="voting_item">
-            <span class="subject">Hangman game</span>
-            <span class="score">50.00%</span>
-        </div>
-        <div class="voting_item">
-            <span class="subject">Snake game</span>
-            <span class="score">25.00%</span>
-        </div>
+        <button class="btn">Submit Vote !</button>
     </div>
 </body>
+
 </html>
