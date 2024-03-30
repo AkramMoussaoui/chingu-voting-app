@@ -73,7 +73,7 @@ const getData = async () => {
       if (active) dataItem.Score += 1;
 
       // Compute the score we will display
-      const displayedScore = ((item.Score / totalVotes) * 100).toFixed(2);
+      const displayedScore = ((dataItem.Score / totalVotes) * 100).toFixed(2);
 
       scoreElement.innerText = displayedScore + "%";
 
